@@ -1,26 +1,26 @@
 <!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
+  <<< Notas del autor: Finish >>>
+  Revisar lo que aprendimos, solicitar retroalimentación, proporcionar próximos pasos.
 -->
 
-## Finish
+## Fin
 
-_Congratulations friend, you've completed this course!_ 🎉
+_¡Felicidades amigo, has completado este curso!_ 🎉
 
 <img src="https://octodex.github.com/images/skatetocat.png" alt=celebrate width=300 align=right>
 
-Here's a recap of all the tasks you've accomplished in your repository:
+Aquí tienes un resumen de todas las tareas que has realizado en tu repositorio:
 
-- You made a workflow reusable by using the `workflow_call` event trigger
-- You created a new job in a separate workflow to call the reusable workflow
-- You added a matrix strategy to run a job on multiple node versions
-- You navigated through the Actions logs to view the workflow runs and results from specific jobs
+- Hiciste un flujo de trabajo reutilizable utilizando el disparador de eventos `workflow_call`.
+- Creaste un nuevo trabajo en un flujo de trabajo separado para llamar al flujo de trabajo reutilizable.
+- Agregaste una estrategia de matriz para ejecutar un trabajo en múltiples versiones de nodo.
+- Navegaste a través de los registros de acciones para ver las ejecuciones de flujo de trabajo y los resultados de trabajos específicos.
 
-### What's next?
+### ¿Qué sigue?
 
-- Learn more about GitHub Actions by reading "[Learn GitHub Actions](https://docs.github.com/actions/learn-github-actions)".
-- Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions).
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/reusable-workflows).
-- [Take another GitHub Skills course](https://github.com/skills).
-- Learn more about GitHub by reading the "[Get started](https://docs.github.com/get-started)" docs.
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+- Aprende más sobre GitHub Actions leyendo "[Aprende GitHub Actions](https://docs.github.com/es/actions/learn-github-actions)".
+- Utiliza acciones creadas por otros en [awesome-actions](https://github.com/sdras/awesome-actions).
+- Nos encantaría saber qué opinas de este curso [en nuestro tablero de discusión](https://github.com/orgs/skills/discussions/categories/reusable-workflows).
+- [Toma otro curso de GitHub Skills](https://github.com/skills).
+- Aprende más sobre GitHub leyendo la documentación de "[Comienza](https://docs.github.com/get-started)".
+- Para encontrar proyectos a los que contribuir, echa un vistazo a [GitHub Explore](https://github.com/explore).

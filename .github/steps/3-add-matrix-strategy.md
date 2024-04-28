@@ -1,16 +1,17 @@
 <!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
+  <<< Notas del autor: Paso 3 >>>
+  Comienza este paso reconociendo el paso anterior.
+  Define términos y enlaza a docs.github.com.
 -->
 
-## Step 3: Add a matrix strategy to your workflow
+## Paso 3: Agregar una estrategia de matriz a tu flujo de trabajo
 
-_Well done! :sparkles:_
+_¡Bien hecho! :sparkles:_
 
-Your **My Starter Workflow** now has a job that outputs the node version of 14 and calls the reusable workflow called **Reusable Workflow**. It then prints a message to the Actions logs of the node version for the build. Now, we haven't checked the Actions logs at the point to see the message, but don't worry, we'll get there after this next step. Let's improve our **My Starter Workflow** a little more by adding a matrix strategy.
+Tu **My Starter Workflow** ahora tiene un trabajo que produce la versión de node 14 y llama al flujo de trabajo reutilizable llamado **Flujo de trabajo reutilizable**. Luego, imprime un mensaje en los registros de Actions de la versión de node para la compilación. Aún no hemos revisado los registros de Actions en este punto para ver el mensaje, pero no te preocupes, llegaremos allí después de este próximo paso. Mejoremos un poco más nuestro **My Starter Workflow** agregando una estrategia de matriz.
 
-**What is a matrix strategy**: A matrix strategy lets you use variables in a single job definition to automatically create multiple job runs that are based on the combinations of the variables. For example, you can use a matrix strategy to test your code in multiple versions of a language or on multiple operating systems. Below is an example:
+**¿Qué es una estrategia de matriz?**: Una estrategia de matriz te permite utilizar variables en una definición de trabajo única para crear automáticamente múltiples ejecuciones de trabajo que se basan en las combinaciones de las variables. Por ejemplo, puedes usar una estrategia de matriz para probar tu código en múltiples versiones de un lenguaje o en múltiples sistemas operativos. A continuación se muestra un ejemplo:
+
 
 ```yaml
 jobs:
@@ -21,18 +22,19 @@ jobs:
         os: [ubuntu-latest, windows-latest]
 ```
 
-To define a matrix strategy inside a job, you first need to define the matrix with the keyword `strategy` followed by the nested keyword `matrix`. You can then define variables for the matrix. In the above example, the variables are `version` with the values of `10, 12, and 14`, and another variable called `os` with the values of `ubuntu-latest and windows latest`.
+Para definir una estrategia de matriz dentro de un trabajo, primero necesitas definir la matriz con la palabra clave `strategy`, seguida de la palabra clave anidada `matrix`. Luego puedes definir variables para la matriz. En el ejemplo anterior, las variables son `version` con los valores `10, 12 y 14`, y otra variable llamada `os` con los valores `ubuntu-latest y windows latest`.
 
-The `example_matrix` job will run for each possible combination of the variables. So, in the above example, the workflow will run six jobs, one for each combination of the os and version variables. If you want to run a job for multiple versions, using a matrix strategy is a great solution over writing out 6 different jobs.
+El trabajo `example_matrix` se ejecutará para cada combinación posible de las variables. Entonces, en el ejemplo anterior, el flujo de trabajo ejecutará seis trabajos, uno para cada combinación de las variables os y version. Si deseas ejecutar un trabajo para múltiples versiones, utilizar una estrategia de matriz es una solución excelente en lugar de escribir 6 trabajos diferentes.
 
-Let's add a matrix strategy to the **My Starter Workflow** so we can run our job on different versions of node instead of the hard-coded single verison of 14.
+Agreguemos una estrategia de matriz al **My Starter Workflow** para que podamos ejecutar nuestro trabajo en diferentes versiones de node en lugar de la única versión codificada de 14.
 
-### :keyboard: Activity: Use a matrix strategy to run multiple versions
+### :keyboard: Actividad: Usa una estrategia de matriz para ejecutar múltiples versiones
 
-1. In the same `my-starter-workflow.yml` file, add a `strategy` keyword under the `call-reusable-workflow` job.
-1. Under `strategy`, add a `matrix` keyword.
-1. Define the `nodeversion` variable to run over the following versions of node `[14, 16, 18, 20]`.
-1. Replace the hard-coded `node` paramter of 14 used in the `with` command, and call the `nodeversion` in the matrix by using the following syntax `${{ matrix.nodeversion }}`. Below is that your job should look like:
+1. En el mismo archivo `my-starter-workflow.yml`, agrega una palabra clave `strategy` debajo del trabajo `call-reusable-workflow`.
+1. Bajo `strategy`, agrega una palabra clave `matrix`.
+1. Define la variable `nodeversion` para ejecutar sobre las siguientes versiones de node `[14, 16, 18, 20]`.
+1. Reemplaza el parámetro `node` codificado en duro de 14 utilizado en el comando `with`, y llama a `nodeversion` en la matriz usando la siguiente sintaxis `${{ matrix.nodeversion }}`. A continuación, se muestra cómo debería lucir tu trabajo:
+
 
    ```yaml
    call-reusable-workflow:
@@ -44,5 +46,6 @@ Let's add a matrix strategy to the **My Starter Workflow** so we can run our job
        node: ${{ matrix.nodeversion }}
    ```
 
-1. To commit your changes, click **Start commit**, and then **Commit changes**.
-1. Wait about 20 seconds for actions to run, then refresh this page (the one you're following instructions from) and an action will automatically close this step and open the next one.
+1. Para confirmar tus cambios, haz clic en **Comenzar confirmación** y luego en **Confirmar cambios**.
+1. Espera unos 20 segundos para que se ejecuten las acciones, luego actualiza esta página (la que estás siguiendo las instrucciones) y una acción cerrará automáticamente este paso y abrirá el siguiente.
+

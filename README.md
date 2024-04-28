@@ -1,78 +1,76 @@
 <header>
 
 <!--
-  <<< Author notes: Course header >>>
-  Read <https://skills.github.com/quickstart> for more information about how to build courses using this template.
-  Include a 1280×640 image, course name in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Next to "About", add description & tags; disable releases, packages, & environments.
-  Add your open source license, GitHub uses MIT license.
+  <<< Notas del autor: Encabezado del curso >>>
+  Lee <https://skills.github.com/quickstart> para obtener más información sobre cómo construir cursos usando esta plantilla.
+  Incluye una imagen de 1280×640, el nombre del curso en minúsculas con una descripción concisa en énfasis.
+  En la configuración de tu repositorio: habilita el repositorio de plantillas, agrega tu imagen social de 1280×640, elimina automáticamente las ramas principales.
+  Junto a "Acerca de", agrega descripción y etiquetas; deshabilita las versiones, paquetes y entornos.
+  Agrega tu licencia de código abierto, GitHub utiliza la licencia MIT.
 -->
 
-# Reusable workflows and matrix strategies
+# Flujos de trabajo reutilizables y estrategias de matriz
 
-_Make a workflow reusable, call it in another workflow, and use a matrix strategy to run multiple versions._
+_Haz que un flujo de trabajo sea reutilizable, llámalo en otro flujo de trabajo y usa una estrategia de matriz para ejecutar múltiples versiones._
 
 </header>
 
 <!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
+    <<< Notas del autor: Inicio del curso >>>
+    Incluye botón de inicio, una nota sobre los minutos de Actions,
+    y dile al aprendiz por qué debería tomar el curso.
 -->
 
-## Welcome
+## Bienvenido
 
-Reusable workflows offer a simple and powerful way to avoid copying and pasting workflows across your repositories, and adding a matrix strategy lets you use variables in a single job definition to automatically create multiple job runs.
+Los flujos de trabajo reutilizables ofrecen una forma simple y poderosa de evitar copiar y pegar flujos de trabajo en tus repositorios, y agregar una estrategia de matriz te permite usar variables en una definición de trabajo única para crear automáticamente múltiples ejecuciones de trabajo.
 
-- **Who is this for**: Developers, DevOps engineers, students, managers, teams, GitHub users.
-- **What you'll learn**: How to create and use reusable workflows, create a matrix strategy, trigger workflows, and find workflow logs.
-- **What you'll build**: An Actions workflow with a matrix strategy that calls a reusable workflow to output multiple verisions of node.
-- **Prerequisites**: In this course you will work with pull requests and YAML workflow files. We recommend you take the [Introduction to GitHub](https://github.com/skills/introduction-to-github) course first or be familiar with GitHub basics, and the [Hello GitHub Actions](https://github.com/skills/hello-github-actions) course for an introduction to GitHub Actions and workflow files.
-- **How long**: This course can be finished in less than one hour.
-- **Attribution**: This Skills course was inspired by a [demo video](https://www.youtube.com/watch?v=MBpyouQtY_M) created by Mickey Gousset ([@mickeygousset](https://github.com/mickeygousset)).
+- **Para quién es esto**: Desarrolladores, ingenieros DevOps, estudiantes, gerentes, equipos, usuarios de GitHub.
+- **Lo que aprenderás**: Cómo crear y usar flujos de trabajo reutilizables, crear una estrategia de matriz, desencadenar flujos de trabajo y encontrar registros de flujos de trabajo.
+- **Qué construirás**: Un flujo de trabajo de Actions con una estrategia de matriz que llama a un flujo de trabajo reutilizable para generar múltiples versiones de node.
+- **Prerrequisitos**: En este curso trabajarás con solicitudes de extracción y archivos de flujo de trabajo YAML. Te recomendamos que primero tomes el curso [Introducción a GitHub](https://github.com/skills/introduction-to-github) o estés familiarizado con los conceptos básicos de GitHub, y el curso [Hola GitHub Actions](https://github.com/skills/hello-github-actions) para una introducción a GitHub Actions y los archivos de flujo de trabajo.
+- **Duración**: Este curso se puede completar en menos de una hora.
+- **Atribución**: Este curso de Skills fue inspirado por un [video demostrativo](https://www.youtube.com/watch?v=MBpyouQtY_M) creado por Mickey Gousset ([@mickeygousset](https://github.com/mickeygousset)).
 
-In this course, you will:
+En este curso, aprenderás a:
 
-1. Make a reusable workflow
-2. Add a job
-3. Add a matrix strategy
-4. Merge your pull request
-5. Trigger the workflow
+1. Hacer un flujo de trabajo reutilizable
+2. Agregar un trabajo
+3. Agregar una estrategia de matriz
+4. Fusionar tu solicitud de extracción
+5. Desencadenar el flujo de trabajo
 
-### How to start this course
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'reusable-workflows',
-  owner: '@me',
-  name: 'skills-reusable-workflows',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+### Cómo comenzar este curso siendo stemdoer
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=reusable-workflows&owner=%40me&name=skills-reusable-workflows&description=My+clone+repository&visibility=public)
+Simplemente espera, esta vista cambiará. 
+Haz click en la pestaña ``Actions`` y observa algo se está ejecutando.
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+### No eres stemdoer
+
+Adelante haz click en el botón.
+
+
+[![comenzar-curso](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_name=reusable-workflows&template_owner=classroom-sebasnaa&description=Mi+repositorio+clonado&visibility=public)
+
+1. Haz clic derecho en **Comenzar curso** y abre el enlace en una nueva pestaña.
+2. En la nueva pestaña, la mayoría de las opciones se completarán automáticamente.
+   - Para el propietario, elige tu cuenta personal o una organización para alojar el repositorio.
+   - Recomendamos crear un repositorio público, ya que los repositorios privados [utilizarán minutos de Actions](https://docs.github.com/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
+   - Desplázate hacia abajo y haz clic en el botón **Crear repositorio** en la parte inferior del formulario.
+3. Después de que se cree tu nuevo repositorio, espera unos 20 segundos, luego actualiza la página. Sigue las instrucciones paso a paso en el README del nuevo repositorio.
 
 <footer>
 
 <!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
+  <<< Notas del autor: Pie de página >>>
+  Agrega un enlace para obtener soporte, página de estado de GitHub, código de conducta, enlace de licencia.
 -->
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/reusable-workflows) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Obtén ayuda: [Publica en nuestro foro de discusión](https://github.com/orgs/skills/discussions/categories/test-with-actions) &bull; [Revisa la página de estado de GitHub](https://www.githubstatus.com/)
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+&copy; 2023 GitHub &bull; [Código de Conducta](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [Licencia MIT](https://gh.io/mit)
 
 </footer>
